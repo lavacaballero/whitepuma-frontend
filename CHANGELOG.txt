@@ -1,0 +1,36 @@
+
+########
+# TODO #
+########
+
+    Websites extension:
+        • When creating a piggy bank, a button should be added automatically.
+        • Make a compound voting page for users showing public statistics
+        • Analytics filter by entry_id
+        • Document debug_mode, preload_only, caption and amount_in_usd
+        • Widget: when balances are updated manually, everything should be shown first
+        • Widget: strip slashes on notification email fields and fix "invoked from" URL
+
+    All:
+        • Create a global OpsLog view
+        • Add direct send
+
+    Pulse:
+        • Add TipBack capability
+        • Add invitation to post something when a coin's pulse is empty
+        • Add image proxy for HTTPS
+        • Add CSS override for mobiles (hide display settings and put everything to float)
+
+#############################
+# CHANGES NOT YET ANNOUNCED #
+#############################
+
+    - Nothing here.
+
+#############
+# CHANGELOG #
+#############
+
+May 12, 2015:
+
+    - Public release.

@@ -1,0 +1,79 @@
+/**
+ * Global styles
+ *
+ * @package    WhitePuma OpenSource Platform
+ * @subpackage Frontend
+ * @copyright  2014 Alejandro Caballero
+ * @author     Alejandro Caballero - acaballero@lavasoftworks.com
+ * @license    GNU-GPL v3 (http://www.gnu.org/licenses/gpl.html)
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * THE SOFTWARE.
+ */
+
+h1 { font-size: 16pt; }
+h2 { font-size: 14pt; }
+h3 { font-size: 12pt; }
+
+h1 a.buttonized .ui-button-text, h1 button .ui-button-text, h1 .ui-button-text-only .ui-button-text { font-size: 10pt; padding-top: 2px; padding-bottom: 2px; font-weight: normal; }
+h2 a.buttonized .ui-button-text, h2 button .ui-button-text, h2 .ui-button-text-only .ui-button-text { font-size: 10pt; padding-top: 2px; padding-bottom: 2px; font-weight: normal; }
+h3 a.buttonized .ui-button-text, h3 button .ui-button-text, h3 .ui-button-text-only .ui-button-text { font-size: 10pt; padding-top: 2px; padding-bottom: 2px; font-weight: normal; }
+h4 a.buttonized .ui-button-text, h4 button .ui-button-text, h4 .ui-button-text-only .ui-button-text { font-size: 10pt; padding-top: 2px; padding-bottom: 2px; font-weight: normal; }
+
+.ui-icon.embedded { display: inline-block; position: relative; top: 2px; }
+
+.indicators                             { padding: 15px 0 0 10px; text-align: center; margin-bottom: 10px; }
+.indicators .indicator                  { display: inline-block; padding: 5px 10px; margin-right: 10px; margin-bottom: 10px; }
+.indicators .indicator .title           { font-size: 8pt; font-weight: bold; margin-left: -15px; margin-top: -10px; padding: 2px; }
+.indicators .indicator .content         { display: block; font-size: 14pt; font-weight: normal; padding: 5px 0; }
+.indicators .indicator .content.numeric { text-align: right; }
+.indicators .indicator.smaller .content { font-size: 12pt; font-weight: normal; }
+.indicators .indicator.full_sized       { display: block;    }
+
+#span_walletaddress { font-weight: bold; }
+code              { color: green; background-color: #C0FFC0; border: 1px solid green;
+                    box-shadow: 2px 2px 1px black; padding: 10px; display: block;
+                    margin: 10px 0; }
+
+table.tablesorter th ,
+table.tablesorter td { font-family: Arial, Helvetica; font-size: 10pt; }
+table.tablesorter td a { color: black; }
+
+.pseudo_link { cursor: pointer; color: blue; text-decoration: underline; }
+
+.links_bar    { margin: 10px 0; padding: 5px; text-align: center; }
+.message_box  { padding: 5px; margin: 10px 0; }
+
+.fixed_font   { font-family: 'Lucida Console', 'Courier new', Courier, monospace; }
+
+.FB_UI_Hidden { width: 100px !important; }
+
+button.ui-button.smaller  .ui-button-text { padding: 0.2em 0.4em; }
+button.ui-button.smallest .ui-button-text { padding: 0.1em 0.2em; font-size: 8pt; }
+
+.table_wrapper           { overflow-x: auto; overflow-y: hidden; width: 100%; }
+.table_wrapper.scrolling { border-left: 2px dotted black; border-right: 2px dotted black; }
+
+tr:hover td { color: black !important; background-color: greenyellow !important; }
+
+@media all and (max-width: 5000px) and (min-width: 601px)
+{
+    #session_buttons { float: right; position: relative; top: -2px; }
+}
+@media all and (max-width: 600px) and (min-width: 100px)
+{
+    #session_buttons { display: block; margin-top: 10px; }
+}
+
+@media all and (max-width: 480px) and (min-width: 100px)
+{
+    #span_walletaddress { font-family: Arial, Helvetica, sans-serif; font-weight: normal; letter-spacing: -1px; }
+}

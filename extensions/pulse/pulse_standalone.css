@@ -1,0 +1,99 @@
+/**
+ * Pulse styles for stand alone stream page
+ *
+ * @package    WhitePuma OpenSource Platform
+ * @subpackage Frontend
+ * @copyright  2014 Alejandro Caballero
+ * @author     Alejandro Caballero - acaballero@lavasoftworks.com
+ * @license    GNU-GPL v3 (http://www.gnu.org/licenses/gpl.html)
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * THE SOFTWARE.
+ */
+
+/* ########### */
+/* Root styles */
+/* ########### */
+
+#wpulse { width: 100%; min-width: 300px; max-width: 600px; text-align: left; margin-left: auto; margin-right: auto; }
+#wpulse .wpulse_logo_horizontal { margin-top: 2px; margin-bottom: 5px; }
+#wpulse .wpulse_logo_vertical   { display: none; }
+#wpulse .wpulse_controls ,
+#wpulse .wpulse_post     { margin: 20px 0; }
+
+#wpulse .wpulse_load_more { margin: 20px 0 0 0; padding: 5px 0; cursor: pointer;
+                            border: 1px solid silver; background-color: white; vertical-align: top;
+                            -webkit-box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.75);
+                            -moz-box-shadow:    2px 2px 2px 0px rgba(50, 50, 50, 0.75);
+                            box-shadow:         2px 2px 2px 0px rgba(50, 50, 50, 0.75); }
+
+/* ####################################### */
+/* Position and size for the entire widget */
+/* ####################################### */
+
+#wpulse .wpulse_post { display: block; }
+
+/* ######## */
+/* Controls */
+/* ######## */
+
+#wpulse .wpulse_controls                        { display: block; padding: 0 5px 5px 5px; height: auto; width: 100%; min-width: 280px; max-width: 400px;
+                                                  margin-left: auto; margin-right: auto; clear: both; }
+#wpulse .wpulse_control_buttons                 { display: block; width: auto; vertical-align: top; }
+#wpulse .wpulse_control_buttons .wpulse_spacer  { display: none; }
+#wpulse .wpulse_controls                        { width: auto; }
+#wpulse .wpulse_controls.expanded               { width: auto; }
+
+#wpulse .wpulse_control_button                  { display: inline-block; margin-bottom: 0; padding: 5px 0; }
+
+#wpulse .wpulse_control_settings                { border-top: 1px solid silver; padding: 5px 0 0 0;  }
+#wpulse .wpulse_control_settings.selected       { width: auto; height: auto; display: block; margin-top: 5px; }
+
+/* ##### */
+/* Posts */
+/* ##### */
+
+#wpulse .wpulse_post .wpulse_post_body .wpulse_post_caption     { height: auto; overflow: auto; max-height: none; }
+
+#wpulse .wpulse_post .wpulse_post_body .wpulse_post_content { max-height: none; }
+
+#wpulse .wpulse_post .wpulse_post_body .wpulse_post_content .wpulse_video_container { height: 400px; }
+
+/* ############## */
+/* Comments frame */
+/* ############## */
+
+#wpulse .wpulse_post .wpulse_post_comments textarea.wpulse_taggable { min-height: 42px; }
+
+/* ################## */
+/* Font redefinitions */
+/* ################## */
+
+#wpulse .wpulse_post { font-size: 12pt; line-height: normal; }
+
+#wpulse .expandible_textarea          ,
+#wpulse .wpulse_taggable              ,
+#wpulse .mentions-input-box .mentions { font-size: 10pt; }
+
+#wpulse .wpulse_error_contents { font-size: 10pt; }
+
+#wpulse .wpulse_post .wpulse_post_info .wpulse_post_author          { line-height: 16px; height: 16px; overflow: hidden; font-size: 10pt; }
+#wpulse .wpulse_post .wpulse_post_info .wpulse_post_destinfo        { line-height: 16px; font-size: 10pt; }
+#wpulse .wpulse_post .wpulse_post_info .wpulse_post_destinfo:before { line-height: 16px; }
+#wpulse .wpulse_post .wpulse_post_info .wpulse_post_timing          { line-height: 16px; font-size: 10pt; }
+
+#wpulse .wpulse_post .wpulse_post_body .wpulse_post_caption     { font-size: 16pt; line-height: normal; max-height: none; overflow: auto; }
+#wpulse .wpulse_post .wpulse_post_body .wpulse_post_content     { font-size: 14pt; line-height: normal; }
+
+#wpulse .wpulse_post .wpulse_post_body .wpulse_post_signature   ,
+#wpulse .wpulse_post[post_type="rain"] .wpulse_post_signature   { font-size: 12pt; line-height: normal; }
+
+#wpulse .wpulse_post_comments_controls, #wpulse .wpulse_post_controls { font-size: 9pt; }

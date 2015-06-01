@@ -1,0 +1,440 @@
+/**
+ * Platform Extension: Websites / button styles
+ *
+ * @package    WhitePuma OpenSource Platform
+ * @subpackage Frontend
+ * @copyright  2014 Alejandro Caballero
+ * @author     Alejandro Caballero - acaballero@lavasoftworks.com
+ * @license    GNU-GPL v3 (http://www.gnu.org/licenses/gpl.html)
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * THE SOFTWARE.
+ */
+
+/* ################ */
+/* Root definitions */
+/* ################ */
+
+.wpuni_mcwidget                      { font-family: 'Lucida Grande', 'Lucida Sans', Arial, Helvetica, sans-serif; text-align: left; }
+.interactive                         { cursor: pointer; }
+.wpuni_mcwidget .wptw_table_area td  { font-family: Arial, Helvetica, sans-serif; font-size: 8pt; text-align: left; }
+
+/* ############# */
+/* Button styles */
+/* ############# */
+
+.wpuni_mcwidget[button_type="round_button"]  { display: inline-block; }
+.wpuni_mcwidget[button_type="round_bar"]     { display: block;        }
+.wpuni_mcwidget[button_type="round_table"]   { display: block;        }
+.wpuni_mcwidget[button_type="square_button"] { display: inline-block; }
+.wpuni_mcwidget[button_type="square_bar"]    { display: block;        }
+.wpuni_mcwidget[button_type="square_table"]  { display: block;        }
+.wpuni_mcwidget[button_type="thin_button"]   { display: inline-block; }
+.wpuni_mcwidget[button_type="thin_bar"]      { display: block;        }
+
+/* ######################### */
+/* Button container settings */
+/* ######################### */
+
+.wpuni_mcwidget .wptw_coin_logo     { display: inline-block; position: relative; z-index: 3; width: 60px; height: 60px; border-width: 2px; border-style: solid; }
+.wpuni_mcwidget .wptw_coin_logo img { width: 60px; height: 60px; }
+
+.wpuni_mcwidget .wptw_caption_area { display: block; position: relative; z-index: 2; border-width: 2px; border-style: solid; }
+
+.wpuni_mcwidget                           .wptw_caption_area  .wptw_caption { line-height: 24px; font-size: 20px; font-weight: bold; }
+
+.wpuni_mcwidget[hide_tips_counter="true"] .wptw_caption_area  .wptw_counter { display: none; }
+.wpuni_mcwidget                           .wptw_caption_area  .wptw_counter { line-height: 16px; font-size: 10px; font-weight: normal; text-transform: uppercase; }
+
+.wpuni_mcwidget .wptw_caption_area  .wptw_counter .wptw_coin_counter { display: inline-block; height: 16px; line-height: 16px; font-size: 14px;
+                                                                       padding-left: 18px; margin-right: 10px; margin-bottom: 0; text-transform: none;
+                                                                       background-position: left center; background-repeat: no-repeat;
+                                                                       background-size: 14px; }
+
+.wpuni_mcwidget .wptw_table_area       { display: none; position: relative; z-index: 1; padding: 5px; border-width: 2px; border-style: solid;
+                                         font-style: normal; font-weight: normal; font-size: 10pt; max-height: 185px; overflow: auto;
+                                         -webkit-column-gap: 20px; -moz-column-gap: 20px; column-gap: 20px; }
+@media all and (max-width: 10000px) and (min-width: 1301px)
+{
+    .wpuni_mcwidget .wptw_table_area { -webkit-column-count: 4; -moz-column-count: 4; column-count: 4; }
+}
+@media all and (max-width:  1300px) and (min-width: 1001px)
+{
+    .wpuni_mcwidget .wptw_table_area { -webkit-column-count: 4; -moz-column-count: 4; column-count: 4; }
+}
+@media all and (max-width:  1000px) and (min-width: 801px)
+{
+    .wpuni_mcwidget .wptw_table_area { -webkit-column-count: 3; -moz-column-count: 3; column-count: 3; }
+}
+@media all and (max-width: 800px) and (min-width: 1px)
+{
+    .wpuni_mcwidget .wptw_table_area { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; }
+}
+
+.wpuni_mcwidget .wptw_table_area.empty { -webkit-column-count: 1; -moz-column-count: 1; column-count: 1; }
+
+.wpuni_mcwidget .wptw_table_area .wptw_table_entry { display: inline-block; min-height: 14px; line-height: 14px;
+                                                     font-size: 12px; font-family: Arial, Helvetica, sans-serif;
+                                                     padding-left: 18px; margin-right: 10px; margin-bottom: 5px; text-transform: none;
+                                                     background-position: left 1px; background-repeat: no-repeat;
+                                                     background-size: 14px; }
+.wpuni_mcwidget .wptw_table_area .wptw_table_entry span { display: inline-block; }
+
+/* ################################### */
+/* Per button style container settings */
+/* ################################### */
+
+.wpuni_mcwidget[button_type="round_table"]  .wptw_table_area ,
+.wpuni_mcwidget[button_type="square_table"] .wptw_table_area { display: block; }
+
+/* ############## */
+/* Round settings */
+/* ############## */
+
+.wpuni_mcwidget[button_type="round_button"] ,
+.wpuni_mcwidget[button_type="round_bar"]    ,
+.wpuni_mcwidget[button_type="round_table"]  { min-height: 64px; }
+
+.wpuni_mcwidget[button_type="round_button"]  .wptw_coin_logo ,
+.wpuni_mcwidget[button_type="round_bar"]     .wptw_coin_logo ,
+.wpuni_mcwidget[button_type="round_table"]   .wptw_coin_logo { border-radius: 32px; }
+
+.wpuni_mcwidget[button_type="round_button"]  .wptw_caption_area ,
+.wpuni_mcwidget[button_type="round_bar"]     .wptw_caption_area ,
+.wpuni_mcwidget[button_type="round_table"]   .wptw_caption_area { margin-top: -64px; margin-right: 32px; padding-left: 34px; padding-right: 8px;
+                                                                  min-height: 40px; overflow: visible;
+                                                                  top: 10px; left: 32px;
+                                                                  border-top-right-radius: 20px; border-bottom-right-radius: 20px;
+                                                                  margin-bottom: 12px; }
+
+.wpuni_mcwidget[hide_tips_counter="true"][button_type="round_button"]  .wptw_caption_area ,
+.wpuni_mcwidget[hide_tips_counter="true"][button_type="round_bar"]     .wptw_caption_area ,
+.wpuni_mcwidget[hide_tips_counter="true"][button_type="round_table"]   .wptw_caption_area { min-height: 40px; }
+
+.wpuni_mcwidget[hide_tips_counter="true"][button_type="round_button"]  .wptw_caption_area .wptw_caption ,
+.wpuni_mcwidget[hide_tips_counter="true"][button_type="round_bar"]     .wptw_caption_area .wptw_caption ,
+.wpuni_mcwidget[hide_tips_counter="true"][button_type="round_table"]   .wptw_caption_area .wptw_caption { line-height: 40px; }
+
+.wpuni_mcwidget[button_type="round_button"]  .wptw_table_area ,
+.wpuni_mcwidget[button_type="round_bar"]     .wptw_table_area ,
+.wpuni_mcwidget[button_type="round_table"]   .wptw_table_area { margin-top: -4px; left: 54px; margin-right: 76px;
+                                                                           border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; }
+
+.wpuni_mcwidget[hide_tips_counter="true"][button_type="round_button"]  .wptw_table_area ,
+.wpuni_mcwidget[hide_tips_counter="true"][button_type="round_bar"]     .wptw_table_area ,
+.wpuni_mcwidget[hide_tips_counter="true"][button_type="round_table"]   .wptw_table_area { margin-top: -4px; left: 54px; margin-right: 76px; }
+
+/* ############### */
+/* Square settings */
+/* ############### */
+
+.wpuni_mcwidget[button_type="square_button"] ,
+.wpuni_mcwidget[button_type="square_bar"]    ,
+.wpuni_mcwidget[button_type="square_table"]  { border-width: 2px; border-style: solid; border-radius: 4px; min-height: 48px; }
+
+.wpuni_mcwidget[button_type="square_button"] .wptw_coin_logo ,
+.wpuni_mcwidget[button_type="square_bar"]    .wptw_coin_logo ,
+.wpuni_mcwidget[button_type="square_table"]  .wptw_coin_logo { width: 44px; height: 44px; border: none; border-top-left-radius: 4px; border-bottom-left-radius: 4px; }
+
+.wpuni_mcwidget[button_type="square_button"] .wptw_coin_logo img ,
+.wpuni_mcwidget[button_type="square_bar"]    .wptw_coin_logo img ,
+.wpuni_mcwidget[button_type="square_table"]  .wptw_coin_logo img { width: 40px; height: 40px; margin: 2px; }
+
+.wpuni_mcwidget[button_type="square_button"] .wptw_caption_area ,
+.wpuni_mcwidget[button_type="square_bar"]    .wptw_caption_area ,
+.wpuni_mcwidget[button_type="square_table"]  .wptw_caption_area { margin-top: -44px; min-height: 44px; overflow: visible; top: 0; left: 46px;
+                                                                  margin-right: 46px; padding-left: 4px; padding-right: 8px;
+                                                                  border: none; }
+
+.wpuni_mcwidget[hide_tips_counter="true"][button_type="square_button"] .wptw_caption_area ,
+.wpuni_mcwidget[hide_tips_counter="true"][button_type="square_bar"]    .wptw_caption_area ,
+.wpuni_mcwidget[hide_tips_counter="true"][button_type="square_table"]  .wptw_caption_area { height: 44px; }
+
+.wpuni_mcwidget[button_type="square_button"] .wptw_caption_area  .wptw_caption ,
+.wpuni_mcwidget[button_type="square_bar"]    .wptw_caption_area  .wptw_caption ,
+.wpuni_mcwidget[button_type="square_table"]  .wptw_caption_area  .wptw_caption { font-size: 20px; line-height: 24px; font-weight: bold; }
+.wpuni_mcwidget[button_type="square_button"] .wptw_caption_area  .wptw_counter ,
+.wpuni_mcwidget[button_type="square_bar"]    .wptw_caption_area  .wptw_counter ,
+.wpuni_mcwidget[button_type="square_table"]  .wptw_caption_area  .wptw_counter { font-size: 10px; line-height: 20px; font-weight: normal; text-transform: uppercase; }
+
+.wpuni_mcwidget[hide_tips_counter="true"][button_type="square_button"] .wptw_caption_area  .wptw_caption ,
+.wpuni_mcwidget[hide_tips_counter="true"][button_type="square_bar"]    .wptw_caption_area  .wptw_caption ,
+.wpuni_mcwidget[hide_tips_counter="true"][button_type="square_table"]  .wptw_caption_area  .wptw_caption { line-height: 46px; }
+
+.wpuni_mcwidget[button_type="square_button"] .wptw_table_area ,
+.wpuni_mcwidget[button_type="square_bar"]    .wptw_table_area ,
+.wpuni_mcwidget[button_type="square_table"]  .wptw_table_area { margin-top: 0; top: 0; left: 0;
+                                                                border-left: 0; border-right: 0; border-bottom: 0;
+                                                                border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+
+.wpuni_mcwidget[button_type="thin_button"]                     ,
+.wpuni_mcwidget[button_type="thin_bar"]                        { border-radius: 2px; border-width: 2px; border-style: solid; min-height: 20px; }
+
+.wpuni_mcwidget[button_type="thin_button"] .wptw_coin_logo     ,
+.wpuni_mcwidget[button_type="thin_bar"]    .wptw_coin_logo     { width: 20px; height: 20px; border: none; }
+
+.wpuni_mcwidget[button_type="thin_button"] .wptw_coin_logo img ,
+.wpuni_mcwidget[button_type="thin_bar"]    .wptw_coin_logo img { width: 16px; height: 16px; margin: 2px; }
+
+.wpuni_mcwidget[button_type="thin_button"] .wptw_caption_area  ,
+.wpuni_mcwidget[button_type="thin_bar"]    .wptw_caption_area  { min-height: 20px; overflow: visible; top: 0; left: 20px;
+                                                                 margin-right: 20px; padding-left: 4px; padding-right: 8px;
+                                                                 border: none; }
+
+.wpuni_mcwidget[button_type="thin_button"] .wptw_caption_area  ,
+.wpuni_mcwidget[button_type="thin_bar"]    .wptw_caption_area  { margin-top: -20px; }
+
+.wpuni_mcwidget[button_type="thin_button"][inverted_drop_shadow="true"] .wptw_caption_area  ,
+.wpuni_mcwidget[button_type="thin_bar"][inverted_drop_shadow="true"]    .wptw_caption_area  { margin-top: -20px; }
+
+.wpuni_mcwidget[button_type="thin_button"] .wptw_caption_area  .wptw_caption { display: inline; font-size: 14px; line-height: 20px; font-weight: normal; }
+.wpuni_mcwidget[button_type="thin_bar"]    .wptw_caption_area  .wptw_caption { display: inline; font-size: 14px; line-height: 20px; font-weight: bold; }
+
+.wpuni_mcwidget[button_type="thin_button"] .wptw_caption_area  .wptw_counter ,
+.wpuni_mcwidget[button_type="thin_bar"]    .wptw_caption_area  .wptw_counter { display: inline; font-size: 12px; line-height: 16px; font-weight: normal; padding-left: 10px; }
+
+.wpuni_mcwidget[button_type="thin_button"][hide_tips_counter="true"] .wptw_caption_area .wptw_counter ,
+.wpuni_mcwidget[button_type="thin_bar"][hide_tips_counter="true"]    .wptw_caption_area .wptw_counter { display: none; }
+
+/* ############# */
+/* Color schemes */
+/* ############# */
+
+.wpuni_mcwidget[color_scheme="red"][button_type="square_button"] ,
+.wpuni_mcwidget[color_scheme="red"][button_type="square_bar"]    ,
+.wpuni_mcwidget[color_scheme="red"][button_type="square_table"]  ,
+.wpuni_mcwidget[color_scheme="red"][button_type="thin_button"]   ,
+.wpuni_mcwidget[color_scheme="red"][button_type="thin_bar"]      ,
+.wpuni_mcwidget[color_scheme="red"] .wptw_coin_logo    ,
+.wpuni_mcwidget[color_scheme="red"] .wptw_caption_area ,
+.wpuni_mcwidget[color_scheme="red"] .wptw_table_area   { background-color: red; border-color: maroon; color: white; }
+.wpuni_mcwidget[color_scheme="red"] .wptw_table_area   { background-color: #FFC0C0; color: black; }
+.wpuni_mcwidget[color_scheme="red"] a                  { color: white; text-decoration: underline; }
+
+.wpuni_mcwidget[color_scheme="orange"][button_type="square_button"] ,
+.wpuni_mcwidget[color_scheme="orange"][button_type="square_bar"]    ,
+.wpuni_mcwidget[color_scheme="orange"][button_type="square_table"]  ,
+.wpuni_mcwidget[color_scheme="orange"][button_type="thin_button"]   ,
+.wpuni_mcwidget[color_scheme="orange"][button_type="thin_bar"]      ,
+.wpuni_mcwidget[color_scheme="orange"] .wptw_coin_logo    ,
+.wpuni_mcwidget[color_scheme="orange"] .wptw_caption_area ,
+.wpuni_mcwidget[color_scheme="orange"] .wptw_table_area   { background-color: #FFA953; border-color: #804040; color: black; }
+.wpuni_mcwidget[color_scheme="orange"] .wptw_table_area   { background-color: #FFD1A4; color: black; }
+.wpuni_mcwidget[color_scheme="orange"] a                  { color: black; text-decoration: underline; }
+
+.wpuni_mcwidget[color_scheme="yellow"][button_type="square_button"] ,
+.wpuni_mcwidget[color_scheme="yellow"][button_type="square_bar"]    ,
+.wpuni_mcwidget[color_scheme="yellow"][button_type="square_table"]  ,
+.wpuni_mcwidget[color_scheme="yellow"][button_type="thin_button"]   ,
+.wpuni_mcwidget[color_scheme="yellow"][button_type="thin_button"]   ,
+.wpuni_mcwidget[color_scheme="yellow"][button_type="thin_bar"]      ,
+.wpuni_mcwidget[color_scheme="yellow"] .wptw_coin_logo    ,
+.wpuni_mcwidget[color_scheme="yellow"] .wptw_caption_area ,
+.wpuni_mcwidget[color_scheme="yellow"] .wptw_table_area   { background-color: yellow; border-color: black; color: black; }
+.wpuni_mcwidget[color_scheme="yellow"] .wptw_table_area   { background-color: #FFFFC0; color: black; }
+.wpuni_mcwidget[color_scheme="yellow"] a                  { color: black; text-decoration: underline; }
+
+.wpuni_mcwidget[color_scheme="green"][button_type="square_button"] ,
+.wpuni_mcwidget[color_scheme="green"][button_type="square_bar"]    ,
+.wpuni_mcwidget[color_scheme="green"][button_type="square_table"]  ,
+.wpuni_mcwidget[color_scheme="green"][button_type="thin_button"]   ,
+.wpuni_mcwidget[color_scheme="green"][button_type="thin_bar"]      ,
+.wpuni_mcwidget[color_scheme="green"] .wptw_coin_logo    ,
+.wpuni_mcwidget[color_scheme="green"] .wptw_caption_area ,
+.wpuni_mcwidget[color_scheme="green"] .wptw_table_area   { background-color: lime; border-color: #005800; color: black; }
+.wpuni_mcwidget[color_scheme="green"] .wptw_table_area   { background-color: #C0FFC0; color: black; }
+.wpuni_mcwidget[color_scheme="greem"] a                  { color: black; text-decoration: underline; }
+
+.wpuni_mcwidget[color_scheme="light_blue"][button_type="square_button"] ,
+.wpuni_mcwidget[color_scheme="light_blue"][button_type="square_bar"]    ,
+.wpuni_mcwidget[color_scheme="light_blue"][button_type="square_table"]  ,
+.wpuni_mcwidget[color_scheme="light_blue"][button_type="thin_button"]   ,
+.wpuni_mcwidget[color_scheme="light_blue"][button_type="thin_bar"]      ,
+.wpuni_mcwidget[color_scheme="light_blue"] .wptw_coin_logo    ,
+.wpuni_mcwidget[color_scheme="light_blue"] .wptw_caption_area ,
+.wpuni_mcwidget[color_scheme="light_blue"] .wptw_table_area   { background-color: #1cd2ff; border-color: #2727a7; color: navy; }
+.wpuni_mcwidget[color_scheme="light_blue"] .wptw_table_area   { background-color: #BBDDFF; color: navy; }
+.wpuni_mcwidget[color_scheme="light_blue"] a                  { color: navy; text-decoration: underline; }
+
+.wpuni_mcwidget[color_scheme="blue"][button_type="square_button"] ,
+.wpuni_mcwidget[color_scheme="blue"][button_type="square_bar"]    ,
+.wpuni_mcwidget[color_scheme="blue"][button_type="square_table"]  ,
+.wpuni_mcwidget[color_scheme="blue"][button_type="thin_button"]   ,
+.wpuni_mcwidget[color_scheme="blue"][button_type="thin_bar"]      ,
+.wpuni_mcwidget[color_scheme="blue"] .wptw_coin_logo    ,
+.wpuni_mcwidget[color_scheme="blue"] .wptw_caption_area ,
+.wpuni_mcwidget[color_scheme="blue"] .wptw_table_area   { background-color: blue; border-color: black; color: white; }
+.wpuni_mcwidget[color_scheme="blue"] .wptw_table_area   { background-color: #C0C0FF; color: black; }
+.wpuni_mcwidget[color_scheme="blue"] a                  { color: black; text-decoration: underline; }
+
+.wpuni_mcwidget[color_scheme="indigo"][button_type="square_button"] ,
+.wpuni_mcwidget[color_scheme="indigo"][button_type="square_bar"]    ,
+.wpuni_mcwidget[color_scheme="indigo"][button_type="square_table"]  ,
+.wpuni_mcwidget[color_scheme="indigo"][button_type="thin_button"]   ,
+.wpuni_mcwidget[color_scheme="indigo"][button_type="thin_bar"]      ,
+.wpuni_mcwidget[color_scheme="indigo"] .wptw_coin_logo    ,
+.wpuni_mcwidget[color_scheme="indigo"] .wptw_caption_area ,
+.wpuni_mcwidget[color_scheme="indigo"] .wptw_table_area   { background-color: indigo; border-color: black; color: white; }
+.wpuni_mcwidget[color_scheme="indigo"] .wptw_table_area   { background-color: #CECEFF; color: black; }
+.wpuni_mcwidget[color_scheme="indigo"] a                  { color: black; text-decoration: underline; }
+
+.wpuni_mcwidget[color_scheme="violet"][button_type="square_button"] ,
+.wpuni_mcwidget[color_scheme="violet"][button_type="square_bar"]    ,
+.wpuni_mcwidget[color_scheme="violet"][button_type="square_table"]  ,
+.wpuni_mcwidget[color_scheme="violet"][button_type="thin_button"]   ,
+.wpuni_mcwidget[color_scheme="violet"][button_type="thin_bar"]      ,
+.wpuni_mcwidget[color_scheme="violet"] .wptw_coin_logo    ,
+.wpuni_mcwidget[color_scheme="violet"] .wptw_caption_area ,
+.wpuni_mcwidget[color_scheme="violet"] .wptw_table_area   { background-color: violet; border-color: black; color: black; }
+.wpuni_mcwidget[color_scheme="violet"] .wptw_table_area   { background-color: #FFB9FF; color: black; }
+.wpuni_mcwidget[color_scheme="violet"] a                  { color: black; text-decoration: underline; }
+
+.wpuni_mcwidget[color_scheme="light"][button_type="square_button"] ,
+.wpuni_mcwidget[color_scheme="light"][button_type="square_bar"]    ,
+.wpuni_mcwidget[color_scheme="light"][button_type="square_table"]  ,
+.wpuni_mcwidget[color_scheme="light"][button_type="thin_button"]   ,
+.wpuni_mcwidget[color_scheme="light"][button_type="thin_bar"]      ,
+.wpuni_mcwidget[color_scheme="light"] .wptw_coin_logo    ,
+.wpuni_mcwidget[color_scheme="light"] .wptw_caption_area ,
+.wpuni_mcwidget[color_scheme="light"] .wptw_table_area   { background-color: #E0E0E0; border-color: gray; color: black; }
+.wpuni_mcwidget[color_scheme="light"] .wptw_table_area   { background-color: whitesmoke; color: black; }
+.wpuni_mcwidget[color_scheme="light"] a                  { color: black; text-decoration: underline; }
+
+.wpuni_mcwidget[color_scheme="dark"][button_type="square_button"] ,
+.wpuni_mcwidget[color_scheme="dark"][button_type="square_bar"]    ,
+.wpuni_mcwidget[color_scheme="dark"][button_type="square_table"]  ,
+.wpuni_mcwidget[color_scheme="dark"][button_type="thin_button"]   ,
+.wpuni_mcwidget[color_scheme="dark"][button_type="thin_bar"]      ,
+.wpuni_mcwidget[color_scheme="dark"] .wptw_coin_logo    ,
+.wpuni_mcwidget[color_scheme="dark"] .wptw_caption_area ,
+.wpuni_mcwidget[color_scheme="dark"] .wptw_table_area   { background-color: #303030; border-color: black; color: white; }
+.wpuni_mcwidget[color_scheme="dark"] .wptw_table_area   { background-color: #181818; color: white; }
+.wpuni_mcwidget[color_scheme="dark"] a                  { color: white; text-decoration: underline; }
+
+/* ############ */
+/* Drop shadows */
+/* ############ */
+
+.wpuni_mcwidget[button_type="round_button"][drop_shadow="true"] .wptw_coin_logo    ,
+.wpuni_mcwidget[button_type="round_button"][drop_shadow="true"] .wptw_caption_area ,
+.wpuni_mcwidget[button_type="round_button"][drop_shadow="true"] .wptw_table_area   ,
+.wpuni_mcwidget[button_type="round_bar"][drop_shadow="true"]    .wptw_coin_logo    ,
+.wpuni_mcwidget[button_type="round_bar"][drop_shadow="true"]    .wptw_caption_area ,
+.wpuni_mcwidget[button_type="round_bar"][drop_shadow="true"]    .wptw_table_area   ,
+.wpuni_mcwidget[button_type="round_table"][drop_shadow="true"]  .wptw_coin_logo    ,
+.wpuni_mcwidget[button_type="round_table"][drop_shadow="true"]  .wptw_caption_area ,
+.wpuni_mcwidget[button_type="round_table"][drop_shadow="true"]  .wptw_table_area   { box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.75); }
+
+.wpuni_mcwidget[button_type="round_button"][drop_shadow="true"][inverted_drop_shadow="true"] .wptw_coin_logo    ,
+.wpuni_mcwidget[button_type="round_button"][drop_shadow="true"][inverted_drop_shadow="true"] .wptw_caption_area ,
+.wpuni_mcwidget[button_type="round_button"][drop_shadow="true"][inverted_drop_shadow="true"] .wptw_table_area   ,
+.wpuni_mcwidget[button_type="round_bar"][drop_shadow="true"][inverted_drop_shadow="true"]    .wptw_coin_logo    ,
+.wpuni_mcwidget[button_type="round_bar"][drop_shadow="true"][inverted_drop_shadow="true"]    .wptw_caption_area ,
+.wpuni_mcwidget[button_type="round_bar"][drop_shadow="true"][inverted_drop_shadow="true"]    .wptw_table_area   ,
+.wpuni_mcwidget[button_type="round_table"][drop_shadow="true"][inverted_drop_shadow="true"]  .wptw_coin_logo    ,
+.wpuni_mcwidget[button_type="round_table"][drop_shadow="true"][inverted_drop_shadow="true"]  .wptw_caption_area ,
+.wpuni_mcwidget[button_type="round_table"][drop_shadow="true"][inverted_drop_shadow="true"]  .wptw_table_area   { box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 1); }
+
+.wpuni_mcwidget[button_type="square_button"][drop_shadow="true"] ,
+.wpuni_mcwidget[button_type="square_bar"][drop_shadow="true"]    ,
+.wpuni_mcwidget[button_type="square_table"][drop_shadow="true"]  ,
+.wpuni_mcwidget[button_type="thin_button"][drop_shadow="true"]   ,
+.wpuni_mcwidget[button_type="thin_bar"][drop_shadow="true"]      { box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.75); }
+
+.wpuni_mcwidget[button_type="square_button"][drop_shadow="true"][inverted_drop_shadow="true"] ,
+.wpuni_mcwidget[button_type="square_bar"][drop_shadow="true"][inverted_drop_shadow="true"]    ,
+.wpuni_mcwidget[button_type="square_table"][drop_shadow="true"][inverted_drop_shadow="true"]  ,
+.wpuni_mcwidget[button_type="thin_button"][drop_shadow="true"][inverted_drop_shadow="true"]   ,
+.wpuni_mcwidget[button_type="thin_bar"][drop_shadow="true"][inverted_drop_shadow="true"]      { box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 1); }
+
+/* ######################### */
+/* Interactive area settings */
+/* ######################### */
+
+.wpuni_mcwidget_ia.wpuni_overlay          { z-index: 1000; display: table; position: fixed; top: 0; left: 0; height: 100%; width: 100%;
+                                            border-spacing: 0; border-collapse: collapse;
+                                            background-color: rgba(0, 0, 0, .2); }
+.wpuni_mcwidget_ia.wpuni_overlay div      { display: table-cell; vertical-align: middle; text-align: center; padding: 0; width: 100%; height: 100%; }
+.wpuni_mcwidget_ia.wpuni_widget           { z-index: 1001; width: 480px; heigth: 340px;
+                                            position: absolute; display: block; text-align: left; margin: 0; padding: 0; overflow: hidden;
+                                            background-color: white; color: black;
+                                            border: 2px solid black; border-radius: 4px;
+                                            box-shadow: 5px 5px 10px 5px rgba(50, 50, 50, 0.75); }
+.wpuni_mcwidget_ia.wpuni_iframe_cover     { z-index: 1002; display: table; position: absolute;
+                                            border-spacing: 0; border-collapse: collapse;
+                                            background-color: rgba(0, 0, 0, .2); }
+.wpuni_mcwidget_ia.wpuni_iframe_cover div { display: table-cell; vertical-align: middle; text-align: center; padding: 0;
+                                            width: 100%; height: 100%; }
+.wpuni_mcwidget_ia.wpuni_widget iframe { width: 100%; height: 300px; border: 0; background-color: transparent; }
+
+@media all and (max-width: 10000px) and (min-width: 801px) { .wpuni_mcwidget_ia.wpuni_widget { width: 720px; } }
+@media all and (max-width:   800px) and (min-width: 480px) { .wpuni_mcwidget_ia.wpuni_widget { width: 460px; } }
+@media all and (max-width:   380px) and (min-width: 301px) { .wpuni_mcwidget_ia.wpuni_widget { width: 340px; } }
+
+@media all and (max-height: 10000px) and (min-height: 601px) { .wpuni_mcwidget_ia.wpuni_widget { height: 540px; } .wpuni_mcwidget_ia.wpuni_widget iframe { height: 500px; } }
+@media all and (max-height:   600px) and (min-height: 281px) { .wpuni_mcwidget_ia.wpuni_widget { height: 440px; } .wpuni_mcwidget_ia.wpuni_widget iframe { height: 400px; } }
+@media all and (max-height:   280px) and (min-height:   1px) { .wpuni_mcwidget_ia.wpuni_widget { height: 260px; } .wpuni_mcwidget_ia.wpuni_widget iframe { height: 220px; } }
+
+.wpuni_mcwidget_heading                                    { height: 40px; overflow: hidden; }
+.wpuni_mcwidget_heading a                                  { font-family: Arial, Helvetica, sans-serif; display: inline;
+                                                             font-size: 18px; line-height: 40px; text-decoration: none; cursor: pointer; }
+.wpuni_mcwidget_heading a img                              { width: 32px; height: 32px; margin: 4px; float: left; }
+
+.wpuni_mcwidget_heading .wpuni_mcwidget_close_button       { display: inline-block; cursor: pointer; float: right; height: 20px; line-height: 20px;
+                                                             font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold;
+                                                             padding: 2px 6px; margin: 6px;
+                                                             color: white; background-color: black;
+                                                             border: 2px solid silver; border-radius: 4px; }
+.wpuni_mcwidget_heading .wpuni_mcwidget_close_button:hover { background-color: #585858; }
+
+/* ================================== */
+/* Color schemes for interactive area */
+/* ================================== */
+
+.wpuni_mcwidget_ia.wpuni_widget[color_scheme="red"]                           { border-color: maroon; }
+.wpuni_mcwidget_ia.wpuni_widget[color_scheme="red"] .wpuni_mcwidget_heading   { background-color: red; color: white; }
+.wpuni_mcwidget_ia.wpuni_widget[color_scheme="red"] a { color: white; }
+
+.wpuni_mcwidget_ia.wpuni_widget[color_scheme="orange"]                           { border-color: #804040; }
+.wpuni_mcwidget_ia.wpuni_widget[color_scheme="orange"] .wpuni_mcwidget_heading   { background-color: #FFA953; color: black; }
+.wpuni_mcwidget_ia.wpuni_widget[color_scheme="orange"] a { color: black; }
+
+.wpuni_mcwidget_ia.wpuni_widget[color_scheme="yellow"]                           { border-color: black; }
+.wpuni_mcwidget_ia.wpuni_widget[color_scheme="yellow"] .wpuni_mcwidget_heading   { background-color: yellow; color: black; }
+.wpuni_mcwidget_ia.wpuni_widget[color_scheme="yellow"] a { color: black; }
+
+.wpuni_mcwidget_ia.wpuni_widget[color_scheme="green"]                           { border-color: #005800; }
+.wpuni_mcwidget_ia.wpuni_widget[color_scheme="green"] .wpuni_mcwidget_heading   { background-color: lime; color: black; }
+.wpuni_mcwidget_ia.wpuni_widget[color_scheme="green"] a { color: black; }
+
+.wpuni_mcwidget_ia.wpuni_widget[color_scheme="light_blue"]                           { border-color: #2727a7; }
+.wpuni_mcwidget_ia.wpuni_widget[color_scheme="light_blue"] .wpuni_mcwidget_heading   { background-color: #1cd2ff; color: navy; }
+.wpuni_mcwidget_ia.wpuni_widget[color_scheme="light_blue"] a { color: navy; }
+
+.wpuni_mcwidget_ia.wpuni_widget[color_scheme="blue"]                           { border-color: black; }
+.wpuni_mcwidget_ia.wpuni_widget[color_scheme="blue"] .wpuni_mcwidget_heading   { background-color: blue; color: white; }
+.wpuni_mcwidget_ia.wpuni_widget[color_scheme="blue"] a { color: white; }
+
+.wpuni_mcwidget_ia.wpuni_widget[color_scheme="indigo"]                           { border-color: black; }
+.wpuni_mcwidget_ia.wpuni_widget[color_scheme="indigo"] .wpuni_mcwidget_heading   { background-color: indigo; color: white; }
+.wpuni_mcwidget_ia.wpuni_widget[color_scheme="indigo"] a { color: white; }
+
+.wpuni_mcwidget_ia.wpuni_widget[color_scheme="violet"]                           { border-color: black; }
+.wpuni_mcwidget_ia.wpuni_widget[color_scheme="violet"] .wpuni_mcwidget_heading   { background-color: violet; color: white; }
+.wpuni_mcwidget_ia.wpuni_widget[color_scheme="violet"] a { color: white; }
+
+.wpuni_mcwidget_ia.wpuni_widget[color_scheme="light"]                           { border-color: gray; }
+.wpuni_mcwidget_ia.wpuni_widget[color_scheme="light"] .wpuni_mcwidget_heading   { background-color: #E0E0E0; color: black; }
+.wpuni_mcwidget_ia.wpuni_widget[color_scheme="light"] a { color: black; }
+
+.wpuni_mcwidget_ia.wpuni_widget[color_scheme="dark"]                           { border-color: black; }
+.wpuni_mcwidget_ia.wpuni_widget[color_scheme="dark"] .wpuni_mcwidget_heading   { background-color: #303030; color: white; }
+.wpuni_mcwidget_ia.wpuni_widget[color_scheme="dark"] a { color: white; }

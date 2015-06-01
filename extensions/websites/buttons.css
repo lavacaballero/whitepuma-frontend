@@ -1,0 +1,96 @@
+/**
+* Platform Extension: Websites / Buttons styles
+*
+* @package    WhitePuma OpenSource Platform
+* @subpackage Frontend
+* @copyright  2014 Alejandro Caballero
+* @author     Alejandro Caballero - acaballero@lavasoftworks.com
+* @license    GNU-GPL v3 (http://www.gnu.org/licenses/gpl.html)
+*
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+* THE SOFTWARE.
+*/
+
+#appearance_helper                          { padding: 20px; margin-bottom: 20px; text-align: center; }
+#appearance_helper.appearance_helper_grid   { background: url('grid.png'); }
+#appearance_helper.appearance_helper_white  { background: white; }
+#appearance_helper.appearance_helper_black  { background: black; }
+#appearance_helper.appearance_helper_silver { background: silver; }
+#appearance_helper.appearance_helper_gray   { background: gray; }
+
+/* Appearance flow */
+#button_appearance .controls .control select { width: 100%; }
+@media all and (max-width: 5000px) and (min-width: 1025px)
+{
+    #appearance_helper           { width: 50%; float: right; margin-top: 10px; }
+    #button_appearance .controls { width: 43%;
+                                   column-count: 2; column-gap: 20px;
+                                   -moz-column-count: 2; -moz-column-gap: 20px;
+                                   -webkit-column-count: 2; -webkit-column-gap: 20px; }
+    #button_appearance .controls .control { display: inline-block; width: 100%; }
+}
+@media all and (max-width: 1024px) and (min-width: 801px)
+{
+    #appearance_helper           { width: 50%; float: right; margin-top: 10px; }
+    #button_appearance .controls { width: 41%;
+                                   column-count: 2; column-gap: 20px;
+                                   -moz-column-count: 2; -moz-column-gap: 20px;
+                                   -webkit-column-count: 2; -webkit-column-gap: 20px; }
+    #button_appearance .controls .control { display: inline-block; width: 100%; }
+}
+@media all and (max-width: 800px) and (min-width: 481px)
+{
+    #button_appearance .controls { column-count: 2; column-gap: 20px;
+                                   -moz-column-count: 2; -moz-column-gap: 20px;
+                                   -webkit-column-count: 2; -webkit-column-gap: 20px; }
+    #button_appearance .controls .control { display: inline-block; width: 100%; }
+}
+
+/* Coins request */
+#button_coin_data .controls                 { text-align: center; }
+#button_coin_data .controls .control        { text-align: left; }
+#button_coin_data .controls .control select { width: 100%; }
+@media all and (max-width: 5000px) and (min-width: 1001px)
+{
+    #button_coin_data .controls .control { display: inline-block; width: 30%; margin: 0 5px;
+                                           vertical-align: top; }
+}
+@media all and (max-width: 1000px) and (min-width: 100px)
+{
+    #button_coin_data .controls .control { display: block; }
+}
+
+.website .website_buttons                   { text-align: center; }
+.website .website_buttons .button_container { vertical-align: top;
+                                              -webkit-box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.75);
+                                              -moz-box-shadow:    4px 4px 5px 0px rgba(50, 50, 50, 0.75);
+                                              box-shadow:         4px 4px 5px 0px rgba(50, 50, 50, 0.75); }
+
+@media all and (max-width: 5000px) and (min-width: 801px)
+{
+    .website .website_buttons .button_container                { display: inline-block; width: 47%; text-align: left; }
+    .website .website_buttons .button_container:nth-child(odd) { margin-right: 1%; }
+}
+@media all and (max-width: 800px) and (min-width: 100px)
+{
+    .website .website_buttons .button_container                { display: block; width: auto; text-align: left; }
+    .website .website_buttons .button_container:nth-child(odd) { margin-right: 0; }
+}
+
+.button_container .button_actions        { display: block; margin-top: 5px; }
+.button_container .button_actions button { height: 24px; line-height: 24px; }
+.button_container .details > div  { margin: 2px; }
+
+.errored { color: red; }
+
+tr.selected       td { background-color: #BBDDFF !important; }
+tr.selected:hover td { background-color: #008080 !important; color: white !important; }
+

@@ -1,0 +1,28 @@
+#
+# Cron jobs file
+# Please edit and import to your account cron jobs.
+#
+# @package    LSW Cryptocoin tipping platform
+# @subpackage Facebook Tipping App
+# @copyright  2014 Alejandro Caballero
+# @author     Alejandro Caballero<lava.caballero@gmail.com>
+# @license    GNU-GPL v3 (http://www.gnu.org/licenses/gpl.html)
+#
+
+# Set here the absolute path to the scripts location
+CPSCRIPTS_LOCATION=~/public_html
+
+# min h   d mo dow command
+  *    */2 * *  *   cd $CPSCRIPTS_LOCATION && php -q cli_group_count_cache_maker.php  >> $CPSCRIPTS_LOCATION/logs/group_count_cache_maker-$(date +\%Y-\%m-\%d).log  2>&1
+  *    *   * *  *   cd $CPSCRIPTS_LOCATION && php -q cli_batch_tips_processor.php     >> $CPSCRIPTS_LOCATION/logs/rains_processor-$(date +\%Y-\%m-\%d).log          2>&1
+  0    5   * *  *   cd $CPSCRIPTS_LOCATION && php -q cli_tip_returner.php             >> $CPSCRIPTS_LOCATION/logs/returner-$(date +\%Y-\%m-\%d).log                 2>&1
+
+# Monitor bots
+# min h   d mo dow command
+  *    *   * *  *   cd $CPSCRIPTS_LOCATION/extensions/pulse     && php -q cli_feed_monitor.php >> $CPSCRIPTS_LOCATION/logs/pulse_monitor-$(date +\%Y-\%m-\%d).log     2>&1
+  *    *   * *  *   cd $CPSCRIPTS_LOCATION/extensions/twitter   && php -q cli_feed_monitor.php >> $CPSCRIPTS_LOCATION/logs/twitter_monitor-$(date +\%Y-\%m-\%d).log   2>&1
+  */5  *   * *  *   cd $CPSCRIPTS_LOCATION/extensions/instagram && php -q cli_feed_monitor.php >> $CPSCRIPTS_LOCATION/logs/instagram_monitor-$(date +\%Y-\%m-\%d).log 2>&1
+
+# Ticker - comment if unneeded
+# min h   d mo dow command
+  30  */6 * *  *   cd $CPSCRIPTS_LOCATION/extensions/price_ticker  && php -q cli_price_updater.php >> $CPSCRIPTS_LOCATION/logs/ticker_updater-$(date +\%Y-\%m-\%d).log 2>&1

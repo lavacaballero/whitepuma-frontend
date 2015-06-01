@@ -1,0 +1,108 @@
+/**
+ * Pulse styles for embedded stream
+ *
+ * @package    WhitePuma OpenSource Platform
+ * @subpackage Frontend
+ * @copyright  2014 Alejandro Caballero
+ * @author     Alejandro Caballero - acaballero@lavasoftworks.com
+ * @license    GNU-GPL v3 (http://www.gnu.org/licenses/gpl.html)
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * THE SOFTWARE.
+ */
+
+/* ########### */
+/* Root styles */
+/* ########### */
+
+#wpulse[type="sidebar"][position="left"]  { left:  0; top: 0; bottom: 0; -webkit-box-shadow: -5px 0px 5px 0px rgba(50, 50, 50, 0.75); -moz-box-shadow: -5px 0px 5px 0px rgba(50, 50, 50, 0.75); box-shadow: -5px 0px 5px 0px rgba(50, 50, 50, 0.75); }
+#wpulse[type="sidebar"][position="right"] { right: 0; top: 0; bottom: 0; -webkit-box-shadow:  5px 0px 5px 0px rgba(50, 50, 50, 0.75); -moz-box-shadow:  5px 0px 5px 0px rgba(50, 50, 50, 0.75); box-shadow:  5px 0px 5px 0px rgba(50, 50, 50, 0.75); }
+
+#wpulse[type="block"]   .wpulse_logo_horizontal { display: none; }
+#wpulse[type="block"]   .wpulse_logo_vertical   { vertical-align: bottom; margin-left: 2px; margin-bottom: 5px; }
+#wpulse[type="sidebar"] .wpulse_logo_horizontal { margin-top: 2px; margin-bottom: 5px; }
+#wpulse[type="sidebar"] .wpulse_logo_vertical   { display: none; }
+
+/* ####################################### */
+/* Position and size for the entire widget */
+/* ####################################### */
+
+#wpulse[type="block"]   { position: relative; width: auto;  margin: 20px 0; padding: 0;   display: block; height: auto;   clear: both; }
+#wpulse[type="sidebar"] { position: fixed;    width: 320px; margin: 0;      padding: 5px; display: block; z-index: 1000; background-color: #0070C0; overflow: auto; }
+
+#wpulse[type="block"]   { max-height: 430px; white-space: nowrap; overflow: auto; border: 1px solid gray;
+                          -webkit-box-shadow:  5px 5px 5px 0px rgba(50, 50, 50, 0.75);
+                           -moz-box-shadow:    5px 5px 5px 0px rgba(50, 50, 50, 0.75);
+                           box-shadow:         5px 5px 5px 0px rgba(50, 50, 50, 0.75); }
+
+#wpulse[type="block"]   .wpulse_post { display: inline-block; white-space: nowrap; }
+#wpulse[type="sidebar"] .wpulse_post { display: block; }
+
+#wpulse[type="block"] .wpulse_post .wpulse_post_contents          { width:  275px; display: inline-block; }
+#wpulse[type="block"] .wpulse_post .wpulse_post_comments.expanded { width:  250px; display: inline-block; }
+
+#wpulse[type="sidebar"] .wpulse_post .wpulse_post_comments_post_image input[type="file"] { max-width: 200px; }
+
+#wpulse .wpulse_post .wpulse_post_comments_post_image input[type="file"] { max-width: 145px; margin-left: 5px; }
+
+/* ######## */
+/* Controls */
+/* ######## */
+
+/* Block stream */
+
+#wpulse[type="block"] .wpulse_controls                       { float: left; }
+
+#wpulse[type="block"] .wpulse_controls                       { display: inline-block; padding: 5px 5px 5px 0; height: 336px; white-space: nowrap; }
+#wpulse[type="block"] .wpulse_control_buttons                { display: inline-block; width: 48px; vertical-align: top; white-space: normal; }
+#wpulse[type="block"] .wpulse_control_buttons .wpulse_spacer { height: 38px;  }
+#wpulse[type="block"] .wpulse_controls                       { width: auto; }
+#wpulse[type="block"] .wpulse_controls.expanded              { width: auto; }
+
+#wpulse[type="block"] .wpulse_control_button                 { display: block; }
+
+#wpulse[type="block"] .wpulse_control_settings               { border-left: 1px solid silver; padding: 0 5px 0 5px;  white-space: normal; }
+#wpulse[type="block"] .wpulse_control_settings.selected      { width: 290px; height: 336px; display: inline-block; }
+
+/* Sidebar */
+
+#wpulse[type="sidebar"] .wpulse_controls                        { display: block; padding: 0 5px 5px 5px; height: auto; }
+#wpulse[type="sidebar"] .wpulse_control_buttons                 { display: block; width: auto; vertical-align: top; }
+#wpulse[type="sidebar"] .wpulse_control_buttons .wpulse_spacer  { display: none; }
+#wpulse[type="sidebar"] .wpulse_controls                        { width: auto; }
+#wpulse[type="sidebar"] .wpulse_controls.expanded               { width: auto; }
+
+#wpulse[type="sidebar"] .wpulse_control_button                  { display: inline-block; margin-bottom: 0; padding: 5px 0; }
+
+#wpulse[type="sidebar"] .wpulse_control_settings                { border-top: 1px solid silver; padding: 5px 0 0 0;  }
+#wpulse[type="sidebar"] .wpulse_control_settings.selected       { width: auto; height: auto; display: block; margin-top: 5px; }
+
+/* ##### */
+/* Posts */
+/* ##### */
+
+#wpulse[type="sidebar"] .wpulse_post .wpulse_post_body .wpulse_post_caption     { height: auto; overflow: auto; max-height: none; }
+
+#wpulse[type="block"] .wpulse_post .wpulse_post_body .wpulse_post_comments_trigger.collapsed:after { content: '˃'; font-weight: bold; }
+#wpulse[type="block"] .wpulse_post .wpulse_post_body .wpulse_post_comments_trigger.expanded:after  { content: '˂'; font-weight: bold; }
+
+#wpulse[type="sidebar"] .wpulse_post .wpulse_post_body .wpulse_post_comments_trigger.collapsed:after { content: '˅'; font-weight: bold; }
+#wpulse[type="sidebar"] .wpulse_post .wpulse_post_body .wpulse_post_comments_trigger.expanded:after  { content: '˄'; font-weight: bold; }
+
+#wpulse[type="sidebar"] .wpulse_post .wpulse_post_body .wpulse_post_content { max-height: none; }
+
+#wpulse[type="block"] .wpulse_post[comments_visible="true"] .wpulse_post_contents { border-right: 1px solid silver; }
+
+/* ############## */
+/* Comments frame */
+/* ############## */
+
+#wpulse[type="block"]   .wpulse_post .wpulse_post_comments { height: 347px; overflow: auto; }

@@ -1,0 +1,98 @@
+/**
+ * Platform Extension: Websites / widget styles
+ *
+ * @package    WhitePuma OpenSource Platform
+ * @subpackage Frontend
+ * @copyright  2014 Alejandro Caballero
+ * @author     Alejandro Caballero - acaballero@lavasoftworks.com
+ * @license    GNU-GPL v3 (http://www.gnu.org/licenses/gpl.html)
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * THE SOFTWARE.
+ */
+
+body, td   { font-family: Arial, Helvetica, sans-serif; font-size: 12pt; }
+
+h1         { font-size: 14pt; background-position: top left; background-size: 32px; background-repeat: no-repeat;
+             line-height: 32px; padding-left: 42px; margin-top: 0; text-align: right; padding-bottom: 10px; border-bottom: 1px solid silver; }
+h1.emptied { text-align: center; padding-left: 0; line-height: normal; }
+h2         { font-size: 14pt; }
+h3         { font-size: 12pt; }
+
+h1 a.buttonized .ui-button-text, h1 button .ui-button-text, h1 .ui-button-text-only .ui-button-text { font-size: 10pt; padding-top: 2px; padding-bottom: 2px; font-weight: normal; }
+h2 a.buttonized .ui-button-text, h2 button .ui-button-text, h2 .ui-button-text-only .ui-button-text { font-size: 10pt; padding-top: 2px; padding-bottom: 2px; font-weight: normal; }
+h3 a.buttonized .ui-button-text, h3 button .ui-button-text, h3 .ui-button-text-only .ui-button-text { font-size: 10pt; padding-top: 2px; padding-bottom: 2px; font-weight: normal; }
+h4 a.buttonized .ui-button-text, h4 button .ui-button-text, h4 .ui-button-text-only .ui-button-text { font-size: 10pt; padding-top: 2px; padding-bottom: 2px; font-weight: normal; }
+
+.pseudo_link { cursor: pointer; color: blue; text-decoration: underline; }
+
+.message_box  { padding: 5px; margin: 10px 0; }
+
+.fixed_font   { font-family: 'Lucida Console', 'Courier new', Courier, monospace; }
+
+.FB_UI_Hidden { width: 100px !important; }
+
+button[big] { font-size: 12pt; }
+
+.block { font-size: 10pt; padding: 10px 0; border-bottom: 1px solid silver; text-align: center; }
+label  { cursor: pointer; }
+
+.coins_component table                         { border-spacing: 0; border-collapse: collapse; }
+.coins_component table tr.selected             { background-color: #BBDDFF; }
+.coins_component table tr.disabled             { display: none; background-color: silver; }
+.coins_component table tr.disabled td          { color: gray; }
+.coins_component table th                      ,
+.coins_component table td                      { text-align: center; vertical-align: middle; padding: 5px 0; font-size: 10pt; border-bottom: 1px solid silver; }
+.coins_component table .coin_name              { text-align: left; font-size: 12pt; }
+.coins_component table .coin_symbol            { font-size: 10pt; }
+.coins_component table .image img              { width: 48px; height: 48px; }
+.coins_component table .control button         { width: 32px; height: 32px; }
+.coins_component table .amount                 { width: 100%; }
+.coins_component table .amount input           { font-size: 18px; line-height: 32px; padding: 0 10px; width: 84%; text-align: right; }
+.coins_component table .amount input[readonly] { color: gray; background-color: silver; }
+.coins_component table .amount input.errored   { color: red; }
+.coins_component table .usd_value              { font-weight: bold; white-space: nowrap; text-align: right; }
+.usd_sum, #usd_wanted, .usd_remaining          { font-weight: bold; white-space: nowrap; text-align: right; }
+
+.usd_remaining           { color: red;     font-weight: bold; }
+.usd_remaining.empty     { color: #008000; }
+.usd_remaining.surpassed { color: #0070C0; }
+.coins_component .coin input[type="radio"], .coins_component .coin input[type="checkbox"] { width: 32px; height: 32px; }
+
+.showme_on_short { display: none; }
+@media all and (max-width: 380px) and (min-width: 1px)
+{
+    .coins_component table td.control { vertical-align: top; }
+    .showme_on_short                  { display: initial; }
+    .hideme_on_short                  { display: none; }
+}
+@media all and (max-width: 10000px) and (min-width: 801px) { .coins_component table .amount input { width: 90%; } }
+@media all and (max-width:   800px) and (min-width: 480px) { .coins_component table .amount input { width: 88%; } }
+@media all and (max-width:   380px) and (min-width: 301px) { .coins_component table .amount input { width: 65%; } }
+
+.delivery_info table          { width: 100%; border-spacing: 0; border-collapse: collapse; }
+.delivery_info table td       { text-align: center; vertical-align: top; font-size: 10pt; }
+.delivery_info table td.arrow { padding-top: 10px; }
+.delivery_info table td img   { width: 40px; }
+
+.transaction_details table    { width: 100%; border-spacing: 0; border-collapse: collapse; }
+.transaction_details table td { text-align: left; vertical-align: top; font-size: 10pt; width: 50%; padding: 0; }
+.transaction_details table td blockquote            { margin: 5px 0 0 10px; }
+.transaction_details table td blockquote blockquote { padding: 1px 2px; border: 1px solid silver; margin: 2px 0 2px 0; }
+.transaction_details table td.left  { padding-right: 10px; border-right: 2px solid silver; }
+.transaction_details table td.right { padding-left: 10px; }
+
+.balance_target                   { color: blue; cursor: copy; text-decoration: underline; }
+.balance_target.empty             { color: red; font-weight: bold; cursor: auto; text-decoration: none; }
+tr.disabled .balance_target.empty { color: maroon; cursor: auto; text-decoration: none; }
+.balance_target.disabled          { color: inherit; cursor: auto; text-decoration: none; }
+
+.automated_details { font-style: italic; font-size: 10pt; margin-top: 10px; padding: 5px; }

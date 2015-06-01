@@ -1,0 +1,49 @@
+/**
+* Platform Extension: Websites / Websites styles
+*
+* @package    WhitePuma OpenSource Platform
+* @subpackage Frontend
+* @copyright  2014 Alejandro Caballero
+* @author     Alejandro Caballero - acaballero@lavasoftworks.com
+* @license    GNU-GPL v3 (http://www.gnu.org/licenses/gpl.html)
+*
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+* THE SOFTWARE.
+*/
+
+#website_form_container .field                    { margin-left: 24px; margin-bottom: 10px; }
+#website_form_container .field input[type="text"] { width: 100%; }
+#website_form_container .field select             { width: 100%; }
+
+.narrow_field_container { vertical-align: top; }
+@media all and (max-width: 4000px) and (min-width: 641px)
+{
+    .narrow_fields_ahead                   { text-align: center; }
+    .narrow_field_container                { display: inline-block; width: 49%; text-align: left; }
+    .narrow_field_container:nth-child(odd) { margin-right: 1%; }
+}
+@media all and (max-width: 640px) and (min-width: 100px)
+{
+    .narrow_fields_ahead                   { display: block; }
+    .narrow_field_container                { display: block; }
+    .narrow_field_container:nth-child(odd) { margin-right: 1%; }
+}
+
+.website               { -webkit-box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.75);
+                         -moz-box-shadow:    4px 4px 5px 0px rgba(50, 50, 50, 0.75);
+                         box-shadow:         4px 4px 5px 0px rgba(50, 50, 50, 0.75); }
+.website .icon         { width: 48px; height: 48px; float: left; margin-right: 5px; margin-bottom: 5px; }
+.website .description  { font-style: italic; font-size: 14pt; margin-bottom: 5px; }
+.website .details div  { display: inline-block; }
+.website .details span { display: inline-block; padding: 2px 5px; border: 1px solid silver; background-color: #FFFFC0; color: black; }
+.website .details div.analytics_counter span { background-color: #FFC0FF; color: black; }
+
+.fa.pseudo_link { text-decoration: none; cursor: help; }

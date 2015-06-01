@@ -1,0 +1,217 @@
+/**
+ * Pulse Base styles
+ *
+ * @package    WhitePuma OpenSource Platform
+ * @subpackage Frontend
+ * @copyright  2014 Alejandro Caballero
+ * @author     Alejandro Caballero - acaballero@lavasoftworks.com
+ * @license    GNU-GPL v3 (http://www.gnu.org/licenses/gpl.html)
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * THE SOFTWARE.
+ */
+
+/* ##### */
+/* Inits */
+/* ##### */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic);
+
+/* ########### */
+/* Root styles */
+/* ########### */
+
+#wpulse                  { display: none; font-family: Roboto, Arial, Helvetica, sans-serif; font-size: 9pt; line-height: normal; color: black; }
+#wpulse .wpulse_controls ,
+#wpulse .wpulse_post     { margin: 5px; border: 1px solid silver; background-color: white; vertical-align: top;
+                           -webkit-box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.75);
+                           -moz-box-shadow:    2px 2px 2px 0px rgba(50, 50, 50, 0.75);
+                           box-shadow:         2px 2px 2px 0px rgba(50, 50, 50, 0.75); }
+#wpulse .wpulse_controls { background-color: #BBDDFF; text-align: center; vertical-align: top; }
+
+#wpulse .wpulse_post a,
+#wpulse .wpulse_post .pseudo_link { color: blue; text-decoration: underline; cursor: pointer; }
+#wpulse .fa.pseudo_link           { text-decoration: none; }
+#wpulse .fa.fa-border.pseudo_link { border-color: blue; }
+
+#wpulse .wpulse_note        { background-color: #E8F3FF; color: black; border: 1px solid gray; border-radius: 5px; padding: 5px; font-style: italic; }
+
+#wpulse .expandible_textarea          ,
+#wpulse .wpulse_taggable              ,
+#wpulse .mentions-input-box .mentions { font-family: Arial, Helvetica, sans-serif; font-size: 9pt; line-height: normal;
+                                        overflow-x: auto; overflow-y: hidden; -moz-box-sizing: border-box; resize: none;
+                                        padding-bottom: 5px; width: 100%; }
+#wpulse .wpulse_taggable_wrapper      { width: 99%; }
+
+#wpulse .wpulse_contents_wrapper { display: inline; }
+
+#wpulse .wpulse_highlighed { background-color: greenyellow; color: black; }
+
+#wpulse .wpulse_error { color: darkred; }
+
+#wpulse .wpulse_error_contents { margin-top: 5px; padding: 5px; background-color: #FFC0C0; color: maroon; border: 1px solid maroon;
+                                 border-radius: 5px; font-family: Arial, Helvetica, sans-serif; font-size: 9pt; }
+
+/* ####################################### */
+/* Position and size for the entire widget */
+/* ####################################### */
+
+body.pulsed_at_left  { padding-right: initial; padding-left:  330px;  }
+body.pulsed_at_right { padding-left:  initial; padding-right: 330px;  }
+
+#wpulse .wpulse_post .wpulse_post_comments { vertical-align: top; }
+
+/* ######## */
+/* Controls */
+/* ######## */
+
+/* Base */
+
+#wpulse .wpulse_control_button          { text-align: center; width: 32px;
+                                          padding: 5px; margin-bottom: 5px;
+                                          border: 2px solid silver; border-radius: 5px; cursor: pointer; }
+#wpulse .wpulse_control_button          { background-color: #E8F3FF; }
+#wpulse .wpulse_control_button:hover    { background-color: #FFFFFF; border-style: outset; }
+#wpulse .wpulse_control_button.selected { background-color: #91C8FF; border-style: inset; cursor: default; }
+
+#wpulse .wpulse_control_button.disabled          ,
+#wpulse .wpulse_control_button.disabled:hover    ,
+#wpulse .wpulse_control_button.disabled.selected { background-color: silver; color: gray; cursor: default; border-style: solid; }
+
+#wpulse .wpulse_control_settings { display: none; vertical-align: top; text-align: left; overflow: auto; }
+
+#wpulse .wpulse_control_settings .title       { font-size: 11pt; font-weight: bold; background-color: #42A0FF;
+                                                color: white; margin-bottom: 5px; padding: 4px 4px 6px 10px; }
+#wpulse .wpulse_control_settings .field       { margin: 5px 0; }
+#wpulse .wpulse_control_settings .field label { cursor: pointer; font-weight: bold; }
+#wpulse .wpulse_control_settings .field .info { margin: 2px 0 0 24px; font-style: italic; }
+
+#wpulse .wpulse_control_settings .field.as_bulleted       { margin-left: 24px; }
+#wpulse .wpulse_control_settings .field.as_bulleted input { margin-left: -24px; }
+
+/* ##### */
+/* Posts */
+/* ##### */
+
+#wpulse .wpulse_post .wpulse_post_contents { white-space: normal; }
+
+#wpulse .wpulse_post .wpulse_post_heading .wpulse_coin_icon { float: right; margin-top: 2px; margin-right: 1px;
+                                                              background-color: white; border: 2px solid black; border-radius: 20px;
+                                                              width: 24px; height: 24px; background-size: 24px;
+                                                              background-repeat: no-repeat; background-position: center center; }
+
+#wpulse .wpost_tipback_info { background-color: #C0FFC0; color: black; border: 1px solid gray; border-radius: 5px;
+                              padding: 5px 5px 5px 30px; margin-bottom: 5px; font-style: normal; text-align: center;
+                              background-position: 1px 1px; background-size: 25px; background-repeat: no-repeat; }
+
+#wpulse .wpulse_post[post_type="link"]         .wpulse_post_content_wrapper ,
+#wpulse .wpulse_post[post_type="link_tipback"] .wpulse_post_content_wrapper ,
+#wpulse .wpulse_post[post_type="rain"]         .wpulse_post_content_wrapper { cursor: pointer; }
+#wpulse .wpulse_post[post_type="link"][is_tipback="true"] .wpulse_post_content_wrapper:hover { background-color: #DDFFDD; }
+
+#wpulse .wpulse_post .wpulse_user_icon     { float: left; vertical-align: top; width: 48px; height: 48px; border-right: 1px solid silver; border-bottom: 1px solid silver; background-color: orange; margin-right: 5px; }
+#wpulse .wpulse_post .wpulse_user_icon img { width: 48px; height: 48px; border: none; }
+#wpulse .wpulse_post .wpulse_post_info     { display: block; vertical-align: top; }
+#wpulse .wpulse_post .wpulse_type_icon     { float: right; display: inline-block; vertical-align: top; width: 48px; height: 48px;
+                                             border-left: 1px solid silver; border-bottom: 1px solid silver; margin-left: 5px;
+                                             background-position: center center; background-repeat: no-repeat; background-size: 48px; }
+#wpulse .wpulse_post .wpulse_type_icon.wpulse_type_text         { background-color: #FFFFFF; background-image: url('img/pulse/text.png'); }
+#wpulse .wpulse_post .wpulse_type_icon.wpulse_type_photo        { background-color: #FFFFC0; background-image: url('img/pulse/photo.png'); }
+#wpulse .wpulse_post .wpulse_type_icon.wpulse_type_video        { background-color: #C0FFFF; background-image: url('img/pulse/video.png'); }
+#wpulse .wpulse_post .wpulse_type_icon.wpulse_type_rain         { background-color: #C0C0FF; background-image: url('img/pulse/rain.png'); }
+#wpulse .wpulse_post .wpulse_type_icon.wpulse_type_link         { background-color: #C0C0FF; background-image: url('img/pulse/link.png'); }
+#wpulse .wpulse_post .wpulse_type_icon.wpulse_type_link_tipback { background-color: #C0FFC0; background-image: url('img/pulse/link_tipback.png'); }
+
+#wpulse .wpulse_post .wpulse_post_info .wpulse_post_author          { line-height: 16px; height: 16px; overflow: hidden; font-size: 10pt; font-weight: bold; }
+#wpulse .wpulse_post .wpulse_post_info .wpulse_post_destinfo        { line-height: 16px; font-size: 10pt; font-weight: normal; }
+#wpulse .wpulse_post .wpulse_post_info .wpulse_post_destinfo:before { line-height: 16px; content: '►'; color: gray; }
+#wpulse .wpulse_post .wpulse_post_info .wpulse_post_timing          { line-height: 16px; font-size: 8pt; color: gray; }
+
+#wpulse                 .wpulse_post .wpulse_post_body .wpulse_post_caption     { clear: both; padding: 5px; font-size: 11pt; line-height: 16px;
+                                                                                  max-height: 49px; overflow: hidden; }
+#wpulse                 .wpulse_post .wpulse_post_body .wpulse_post_content     { padding: 5px; max-height: 200px; overflow: auto; overflow-x: hidden; border-top: 1px solid silver; border-bottom: 1px solid silver; clear: both; }
+#wpulse                 .wpulse_post .wpulse_post_body .wpulse_post_content .wpulse_video_container { height: 200px; width: 100%; }
+#wpulse                 .wpulse_post .wpulse_post_body .wpulse_post_content .wpulse_img_wrapper     { text-align: center; clear: both; }
+#wpulse                 .wpulse_post .wpulse_post_body .wpulse_post_content img                     { max-width: 100%; }
+#wpulse                 .wpulse_post .wpulse_post_body .wpulse_post_signature   { padding-top: 5px; font-size: 9pt; color: gray; font-style: italic; }
+#wpulse                 .wpulse_post[post_type="rain"] .wpulse_post_signature   { font-size: 10pt; line-height: normal; color: black; font-style: italic; }
+
+#wpulse .wpulse_post .wpulse_post_body .wpulse_post_controls         { padding: 5px; padding-bottom: 2px; }
+#wpulse .wpulse_post .wpulse_post_body .wpulse_post_comments_trigger { float: right; }
+
+#wpulse .wpulse_post .wpulse_post_control { display: inline-block; vertical-align: top; margin: 1px 1px 0 1px; }
+
+#wpulse .wpulse_post[post_type="link"] .wpulse_post_content_wrapper { padding: 5px; border: 2px solid #0070C0; background-color: #E8F3FF; }
+
+/* ############## */
+/* Comments frame */
+/* ############## */
+
+#wpulse .wpulse_post .wpulse_post_comments { white-space: normal; }
+
+#wpulse .wpulse_post[comments_visible="true"] { background-color: #E8F3FF; border-color: black; }
+
+#wpulse .wpulse_post .wpulse_post_comments.collapsed                                { display: none; }
+#wpulse .wpulse_post .wpulse_post_comments .wpulse_post_comments_entry              { padding: 5px; }
+#wpulse .wpulse_post .wpulse_post_comments .wpulse_post_comments_author_icon        { width: 32px; height: 32px; display: block; background-color: silver; border: 1px solid silver; vertical-align: top; }
+#wpulse .wpulse_post .wpulse_post_comments .wpulse_post_comments_author_icon img    { width: 32px; height: 32px; margin: 0; border: none; }
+#wpulse .wpulse_post .wpulse_post_comments .wpulse_post_comments_author_name        { font-weight: bold; display: inline; color: #0070C0; margin-right: 5px; }
+#wpulse .wpulse_post .wpulse_post_comments .wpulse_post_comments_body               { display: block; margin-left: 37px; vertical-align: top; margin-top: -35px; }
+#wpulse .wpulse_post .wpulse_post_comments .wpulse_post_comments_controls           { display: block; margin-left: 37px; margin-top: 5px; }
+#wpulse .wpulse_post .wpulse_post_comments .wpulse_post_comments_controls_timeago   { color: gray; display: inline-block; margin-right: 5px; }
+#wpulse .wpulse_post .wpulse_post_comments .wpulse_comment_author_signature         { padding-top: 5px; }
+
+#wpulse .wpulse_post .wpulse_post_comments .wpulse_post_comments_post_image   { margin-top: 5px; }
+#wpulse .wpulse_post .wpulse_post_comments .wpulse_post_comments_post_button  { margin-top: 5px; text-align: right; }
+#wpulse .wpulse_comments_loading_spinner { margin-bottom: 10px; text-align: center; display: none; }
+
+#wpulse .wpulse_load_more { display: none; text-align: center; font-size: 14pt; }
+
+/* ################ */
+/* Generic elements */
+/* ################ */
+
+#wpulse .wpulse_post .wpulse_img_wrapper         ,
+#wpulse .wpulse_post .wpulse_image_container     { display: block; clear: both; margin: 5px 0; }
+#wpulse .wpulse_post .wpulse_img_wrapper     img ,
+#wpulse .wpulse_post .wpulse_image_container img { border: 1px solid gray; max-width: 100%; }
+
+#wpulse textarea.wpulse_taggable           { min-height: 37px; }
+#wpulse input[type="number"].wpulse_tiny   { width: 50px; text-align: right; }
+#wpulse input[type="number"].wpulse_crypto { width: 85px; text-align: right; }
+
+#wpulse .wpulse_spanned_items_container             { padding-bottom: 0; }
+#wpulse .wpulse_spanned_items_container .item       { display: inline-block; border-radius: 5px;
+                                                      cursor: pointer; font-style: normal;
+                                                      line-height: 16px; padding: 2px 5px; margin: 0 5px 5px 0; }
+#wpulse .wpulse_spanned_items_container .item img   { width: 16px; height: 16px; margin-right: 5px; vertical-align: bottom; }
+#wpulse .wpulse_spanned_items_container .item .fa   { margin-left: 5px; }
+#wpulse .wpulse_spanned_items_container .item       { background-color: #C0FFFF; border: 1px solid #8080FF; color: black; }
+#wpulse .wpulse_spanned_items_container .item:hover { background-color: white;   border: 1px solid blue;    color: blue;  }
+
+/* ################### */
+/* Composition control */
+/* ################### */
+
+#wpulse .wpulse_control_settings .wpulse_post_type_toggler          { display: inline-block; padding: 0 3px; border: 1px solid silver;
+                                                                      font-weight: normal; border-radius: 3px; font-size: 10pt; margin-top: 1px;
+                                                                      background-color: #E8F3FF; color: black; cursor: pointer; }
+#wpulse .wpulse_control_settings .wpulse_post_type_toggler:hover    { background-color: white;   border-style: outset; }
+#wpulse .wpulse_control_settings .wpulse_post_type_toggler.selected { background-color: #91C8FF; border-style: inset; cursor: default; }
+
+#wpulse .wpulse_control_settings[toggle_for="composer"] input[type="text"] ,
+#wpulse .wpulse_control_settings[toggle_for="composer"] input[type="file"] ,
+#wpulse .wpulse_control_settings[toggle_for="composer"] select             { width: 99%; }
+
+#wpulse .wpulse_control_settings[toggle_for="composer"] input[name="wpost_composer[tipback_coin_amount]"] ,
+#wpulse .wpulse_control_settings[toggle_for="composer"] input[name="wpost_composer[tipback_user_amount]"] { float: right; margin-right: 2px; }
+
+#wpulse .wpulse_control_settings[toggle_for="composer"] .field[for="link"] .info.special { margin-top: 5px; margin-bottom: 10px; font-style: normal; }

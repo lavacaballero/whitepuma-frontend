@@ -1,0 +1,6 @@
+.idea/
+Thumbs*.db
+Desktop*.ini
+config*.php
+!config-sample.php
+.htaccess

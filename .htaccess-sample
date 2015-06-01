@@ -1,0 +1,33 @@
+#
+# .htaccess file - update as needed
+#
+# @package    Crypto Currency Platform
+# @subpackage Frontend
+# @copyright  2013 Alejandro Caballero
+# @author     Alejandro Caballero - lava.caballero@gmail.com
+# @license    GNU-GPL v3 (http://www.gnu.org/licenses/gpl.html)
+#
+
+php_value zlib.output_compression_level 5
+php_flag zlib.output_compression On
+
+<FilesMatch "\.inc$|\.tpl$|\.xml$">
+deny from all
+</FilesMatch>
+
+Options -Indexes
+
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^toolbox/get_qrcode/(.*)$ /toolbox.php?mode=get_qrcode&address=$1
+
+RewriteRule ^widget/(.*)$             /extensions/websites/widgets/universal/button.php?website_public_key=$1              [QSA,L]
+RewriteRule ^buttonizer$              /extensions/websites/widgets/universal/                                              [R=Permanent,L]
+RewriteRule ^buttonizer/              /extensions/websites/widgets/universal/                                              [R=Permanent,L]
+RewriteRule ^analytics/(.*)/(.*)/     /extensions/websites/widgets/universal/analytics/?website_public_key=$1&button_id=$2 [R=Permanent,L]
+RewriteRule ^analytics/(.*)/(.*)      /extensions/websites/widgets/universal/analytics/?website_public_key=$1&button_id=$2 [R=Permanent,L]
+RewriteRule ^analytics/(.*)/          /extensions/websites/widgets/universal/analytics/?website_public_key=$1              [R=Permanent,L]
+RewriteRule ^analytics/(.*)           /extensions/websites/widgets/universal/analytics/?website_public_key=$1              [R=Permanent,L]
+RewriteRule ^analytics/               /extensions/websites/widgets/universal/analytics/                                    [R=Permanent,L]
+RewriteRule ^analytics                /extensions/websites/widgets/universal/analytics/                                    [R=Permanent,L]
