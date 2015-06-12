@@ -100,14 +100,16 @@ find a lot of love in here.
 ## Requirements
 
 * Apache 2 with rewrite module
-* PHP 5.3+ with mcrypt and gd modules
-* MySQL 5.5
+* PHP 5.3+ with mcrypt, curl, zlib and gd
+* MySQL 5.5+
 
 ## Installation
 
 Assuming you already setup Apache, PHP and MySQL and you have a host name for the platform:
 
 1. Setup the backend host and the wallet endpoint.
+   **Note:** If you've configured Apache yourself, you must configure the *AllowOverride* directive
+   to **all** on the vhost section.
 
 2. Create a user, a pass and a database to hold the data cache.
 
